@@ -26,6 +26,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	public StudentDTO createStudent(StudentDTO student) {
 		Student studentDomain = new Student();
+		student.setId(null);
 		BeanUtils.copyProperties(student, studentDomain);
 		student.setId(studentRepository.save(studentDomain).getId());
 		return student;
