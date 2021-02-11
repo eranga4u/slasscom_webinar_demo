@@ -12,6 +12,7 @@ management:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/demo
+      #uri: mongodb://localhost:27017/demo
+      uri: ${MONGO_URL}
      
       
